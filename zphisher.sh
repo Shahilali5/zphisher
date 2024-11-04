@@ -200,16 +200,28 @@ check_status() {
 	[ $? -eq 0 ] && echo -e "${GREEN}Online${WHITE}" && check_update || echo -e "${RED}Offline${WHITE}"
 }
 
+#!/bin/bash
+
+# Color definitions
+ORANGE='\033[0;33m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+WHITE='\033[1;37m'
+CYAN='\033[0;36m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+__version__='1.0.0'  # Example version
+
 ## Banner
 banner() {
-	cat <<- EOF
+    cat <<- EOF
 		${ORANGE}
 		${ORANGE}  ______      _     _     _               
 		${ORANGE} |  ____|    | |   (_)   | |              
 		${ORANGE} | |__ __ _ | |__  _ ___| |__   ___ _ __ 
-		${ORANGE} |  __/ _` || '_ \| / __| '_ \ / _ \ '__|
-		${ORANGE} | | | (_| || | | | \__ \ | | |  __/ |   
-		${ORANGE} |_|  \__,_||_| |_|_|___/_| |_|\___|_|   
+		${ORANGE} |  __/ _\` || '_ \\| / __| '_ \\ / _ \\ '__|
+		${ORANGE} | | | (_| || | | | \\__ \\ | | |  __/ |   
+		${ORANGE} |_|  \\__,_||_| |_|_|___/_| |_|\\___|_|   
 		${ORANGE}      | |                                
 		${ORANGE}      |_|               ${RED}Version : ${__version__}
 
@@ -220,7 +232,7 @@ banner() {
 
 ## Small Banner
 banner_small() {
-	cat <<- EOF
+    cat <<- EOF
 		${BLUE}
 		${BLUE}  ░▀▀█░█▀█░█░█░▀█▀░█▀▀░█░█░█▀▀░█▀▄
 		${BLUE}  ░▄▀░░█▀▀░█▀█░░█░░▀▀█░█▀█░█▀▀░█▀▄
